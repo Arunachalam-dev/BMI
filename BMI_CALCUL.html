@@ -2,51 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="bmi.css">
 </head>
-<script>
-   function bmi()
-    {
-        const x= parseFloat( document.getElementById("HEIGHT").value);
-        const y= parseFloat (document.getElementById("WEIGHT").value);
-        let d= "";
-        // const z= y /(x*x);
-        const z = y / Math.pow(x/100,2);
-        // let out = parseInt(y)  / parseInt(z);
-       
-       
-if (z>18.5)
- {
-    d ="underweing";
- }
-else if (z <=18.5 && z >=24.9)
-{
-    d ="Normal";
-}
-else if (z <=25 && z >= 29.9)
-    {
-    d ="overweing"; 
-}
-else (z>30)
-{
-    d = "obesity";
 
-}   
-document.write ("BMI VALUE :"  + z.toFixed(2) +"<br>");
-document.write("BMI WEIGHT :" + d );
-    }
 
-   
-
-   
+<body>
+    <div class="box">
+    <form action="">
+    <label for="">ENTER YOUR HEIGHT :</label>
+    <input type="height"  name="HEIGHT" id="HEIGHT" value="" >
+    <label for="">ENTER YOUR WEIGHT :</label>
+    <input type="weight"  name="WEIGHT" id="WEIGHT" value="" >
+    <button type="button" onclick="bmi()" style=" text-align: center; padding: auto;">click</button>
+</form>
+</div>
+<script src="bmi.js">
     
 </script>
-<body>
-    <label for="">ENTER YOUR HEIGHT :</label>
-    <input type="text"  name="HEIGHT" id="HEIGHT" value="" ><br>
-    <label for="">ENTER YOUR WEIGHT :</label>
-    <input type="text"  name="WEIGHT" id="WEIGHT" value="" ><br>
-    <button type="button" onclick="bmi()">click</button>
 </body>
 </html>
